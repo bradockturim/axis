@@ -1,0 +1,911 @@
+:root {
+    --primary: #FF8939;
+    --primary-hover: #e67a32;
+    --bg-dark: #000000;
+    --bg-card: #141414;
+    --text-white: #FFFFFF;
+    --text-gray: #A0A0A0;
+    --border-radius: 24px;
+    --container-width: 1200px;
+    --transition: all 0.3s ease;
+}
+
+/* Base / Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1, h2, h3, h4, p, span, a {
+    word-wrap: break-word;
+    hyphens: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px; /* Padding obrigatório de 20px */
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    z-index: 1000;
+    padding: 12px 32px;
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 8px 32px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.logo-img-small {
+    height: 40px;
+    width: auto;
+    margin-bottom: 32px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.nav-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-white);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 18px;
+}
+
+.btn-outline {
+    background: white;
+    color: black;
+    border: none;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 30%, rgba(255,126,51,0.1) 100%), url('foto.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-image-mobile {
+    display: none;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero .subheadline {
+    font-size: 20px;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.hero-tags-wrapper {
+    margin-top: 80px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.hero-tags {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scrollTags 30s linear infinite;
+}
+
+@keyframes scrollTags {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+/* Section Common */
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.section-title.white {
+    color: white;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-gray);
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+/* Para Quem É */
+.para-quem {
+    padding: 100px 0;
+    background-color: black;
+    background-image: url('pattern axis.png');
+    background-size: 300px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 40px 24px;
+    border-radius: 32px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #1f1f1f;
+}
+
+.card-icon-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+    object-fit: contain;
+    margin-inline: auto;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 100px 0;
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre-circles {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 1000px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sobre-circles::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 45px dotted #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.sobre-circles.left { left: -320px; }
+.sobre-circles.right { right: -320px; }
+.sobre-circles.left::before { right: 0; }
+.sobre-circles.right::before { left: 0; }
+
+.sobre-content {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    margin-top: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-image {
+    flex: 0 0 45%;
+    height: 500px;
+    z-index: 2;
+}
+
+.sobre-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.1);
+}
+
+.sobre-text-card {
+    flex: 0 0 65%;
+    background: white;
+    color: #333;
+    padding: 60px 60px 60px 100px;
+    border-radius: 40px;
+    margin-left: -10%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 3;
+}
+
+.sobre-text-card p {
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/* Planos Section */
+.planos {
+    padding: 100px 0;
+    background: radial-gradient(circle at top left, #2a150a 0%, #000 50%);
+}
+
+.planos-tagline {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 48px;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Services Slider */
+.services-slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+    overflow: hidden;
+    border-radius: 24px;
+    height: 400px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.slide-overlay h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+.planos-cta h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.planos-cta p {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.planos-card {
+    background: #3d2212;
+    padding: 60px 48px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 126, 51, 0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.planos-card h3 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.price {
+    margin-bottom: 48px;
+}
+
+.price .from {
+    display: block;
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+.price .value {
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.features {
+    margin-bottom: 48px;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.features i {
+    color: var(--primary);
+    width: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 80px 0 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-info .logo {
+    margin-bottom: 24px;
+}
+
+.footer-info p {
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+.social-links {
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-white);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+.footer-nav h4 {
+    margin-bottom: 24px;
+}
+
+.footer-nav ul li {
+    margin-bottom: 12px;
+}
+
+.footer-nav a {
+    color: var(--text-gray);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------- */
+/* MOBILE RESPONSIVE (max-width: 768px)       */
+/* ----------------------------------------- */
+@media (max-width: 768px) {
+    /* Global Mobile Settings */
+    :root {
+        --border-radius: 16px;
+    }
+
+    body {
+        font-size: 14px; /* Legibilidade mínima 14px */
+    }
+
+    .container {
+        padding: 0 20px; /* Padding horizontal obrigatório */
+    }
+
+    /* 3. Navegação Principal (Hamburger Menu) */
+    .header {
+        width: 95%;
+        padding: 10px 20px;
+        top: 10px;
+        border-radius: 30px;
+    }
+
+    .header.scrolled {
+        padding: 8px 20px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.98);
+        padding: 40px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .mobile-only {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-btn {
+        display: none; /* Esconde o botão na nav para dar lugar ao hamburger */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Mostra o ☰ */
+    }
+
+    /* 1. Hero Section (Reorganização Vertical) */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        min-height: auto;
+        text-align: center;
+        background: black; /* Remove background image no mobile */
+    }
+
+    .hero-layout {
+        flex-direction: column-reverse; /* Banner acima do texto */
+        gap: 30px; /* Espaçamento vertical mínimo de 20px garantido */
+    }
+
+    .hero-image-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 0; /* Removido margin-top pois agora é o primeiro elemento */
+        margin-bottom: 10px;
+    }
+
+    .hero-image-mobile img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px; /* Redução para mobile */
+        margin-bottom: 16px;
+    }
+
+    .hero .subheadline {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .hero-tags-wrapper {
+        margin-top: 40px;
+    }
+
+    .tag {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+
+    /* 2. Sistema de Grids (Coluna Única) */
+    .grid-cards {
+        grid-template-columns: repeat(1, 1fr) !important; /* Força 1 coluna */
+        gap: 16px;
+    }
+
+    /* 4. Cards/Produtos (Coluna Única) */
+    .card {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    /* Para Quem É Section */
+    .para-quem {
+        padding: 60px 0;
+        background-image: none; /* Remove o pattern no mobile */
+        background-color: black;
+    }
+
+    /* Sobre Section */
+    .sobre {
+        padding: 60px 0;
+    }
+
+    .sobre-circles {
+        display: none; /* Remove círculos que podem causar scroll lateral */
+    }
+
+    .sobre-content {
+        flex-direction: column; /* Empilhamento vertical */
+        margin-top: 32px;
+    }
+
+    .sobre-image {
+        width: 100%;
+        height: 250px;
+        margin-bottom: -20px; /* Sobreposição controlada */
+        z-index: 2;
+    }
+
+    .sobre-image img {
+        border-radius: 20px;
+    }
+
+    .sobre-text-card {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 20px;
+        border-radius: 20px;
+        z-index: 3;
+    }
+
+    .logo-img-small {
+        margin-bottom: 20px;
+    }
+
+    /* Planos Section */
+    .planos {
+        padding: 60px 0;
+    }
+
+    .planos-grid {
+        grid-template-columns: repeat(1, 1fr) !important; /* Força 1 coluna */
+        gap: 40px;
+    }
+
+    .services-slider {
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .planos-cta h2 {
+        font-size: 28px;
+    }
+
+    .planos-cta p {
+        font-size: 16px;
+    }
+
+    .planos-card {
+        padding: 40px 20px;
+        border-radius: 30px;
+    }
+
+    .planos-card h3 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .price .value {
+        font-size: 48px;
+    }
+
+    /* 5. Footer (Empilhamento Vertical) */
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-info .logo img {
+        margin-inline: auto;
+    }
+
+    .social-links a {
+        justify-content: center;
+    }
+
+    .footer-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Suporte para telas muito pequenas (320px) */
+@media (max-width: 414px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+    .price .value {
+        font-size: 40px;
+    }
+}

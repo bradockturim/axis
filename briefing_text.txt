@@ -1,0 +1,213 @@
+BRIEFING COMPLETO DO SITE
+AXIS ACADEMIA E PILATES
+1. Informações da Empresa
+Razão Social: AXIS ACADEMIA E PILATES LTDA
+Endereço: Av. do Café, 489 – Vila Guarani – São Paulo – SP
+CNPJ: 57.047.249/0001-70
+Cidade de atuação: São Paulo – SP
+Telefone Comercial: (11) 96761-5459
+WhatsApp: (11) 96761-5459
+E-mail principal: 
+axis@axisfitness.com.br
+E-mail secundário: 
+studioaxisoficial@gmail.com
+Instagram: @studioaxisoficial
+2. Objetivo do Site
+Criar uma Landing Page simples, direta e focada em conversão.
+Objetivos:
+Gerar leads
+Direcionar para WhatsApp
+Agendamento de aula experimental
+Apresentação institucional
+Atrair público qualificado
+Converter visitantes em alunos
+CTA principal:
+AGENDAR AULA PELO WHATSAPP
+3. Estrutura do Site (Landing Page)
+1. Seção Hero (Topo)
+Deve conter:
+Logo da empresa
+Headline
+ forte
+Subheadline
+Botão WhatsApp
+Foto do 
+studio
+/alunos
+Texto com preço inicial
+Headline
+ sugeridas:
+Sua saúde, nosso foco
+Recupere seus movimentos com segurança
+Autonomia, equilíbrio e qualidade de vida
+Resultados reais com acompanhamento de verdade
+IMPORTANTE — DEVE TER EM DESTAQUE:
+PLANOS A PARTIR DE R$ 229,90
+Botão principal:
+Agendar Aula Experimental
+2. Sobre a Empresa
+O Studio 
+Áxis
+ nasceu da união entre fisioterapia e educação física, com o objetivo de oferecer um cuidado completo e personalizado.
+A parceria começou dentro de um 
+studio
+ de dança na região do Jabaquara, onde durante três anos foi desenvolvido um trabalho próximo e individualizado com cada aluno.
+Com o crescimento da demanda e a visão de expandir o atendimento, surgiu o Studio 
+Áxis
+ Fitness: um espaço voltado para reabilitação, prevenção e performance, integrando fisioterapia e treinamento com foco em saúde, segurança e qualidade de vida.
+3. Serviços
+Criar cards para:
+Pilates Studio
+Fisioterapia Ortopédica
+Fisioterapia Neurológica
+Fisioterapia Adulto e Pediátrica
+Treinamento Funcional
+Musculação com Personal Trainer
+Massagem Terapêutica
+Cada serviço com botão:
+Agendar pelo WhatsApp
+4. Diferenciais
+Nosso diferencial é a união entre saúde, acolhimento e personalização real. Cada aluno é atendido de forma individual, com olhar clínico e planejamento estruturado, garantindo segurança e evolução contínua.
+Não tratamos apenas a dor. Trabalhamos com reabilitação, prevenção e fortalecimento, respeitando o tempo e as limitações de cada pessoa.
+Diferente de academias convencionais, não somos um ambiente lotado ou competitivo. O Studio 
+Áxis
+ é um espaço tranquilo, seguro e acolhedor, ideal para iniciantes, idosos e pessoas que precisam treinar com acompanhamento profissional.
+Principais diferenciais:
+Atendimento personalizado e individual
+Integração entre fisioterapia e treinamento
+Olhar clínico especializado
+Ambiente tranquilo e acolhedor
+Foco em reabilitação e prevenção
+Acompanhamento profissional próximo
+Ideal para iniciantes e melhor idade
+Treino com segurança e orientação técnica
+Evolução com cuidado individual
+Studio sem superlotação
+5. Público-Alvo
+Pessoas com dor
+Reabilitação
+Melhor idade
+Pós-lesão
+Sedentários
+Iniciantes
+Pessoas que têm medo de academia
+Quem busca treinar com segurança
+Alunos que valorizam acompanhamento profissional
+6. Seção de Preço (Obrigatória)
+Criar bloco com destaque visual:
+Planos a partir de R$ 229,90
+Texto apoio:
+Treinos personalizados com acompanhamento profissional
+Ambiente seguro e acolhedor
+Aula experimental disponível
+Botão:
+Agendar Aula Experimental
+7. Chamada para Conversão
+Frases para usar:
+Comece hoje a cuidar de você
+Treinar com segurança faz toda a diferença
+Seu corpo pode mais, nós te ajudamos a recuperar
+Estamos prontos para te atender
+Independência começa com movimento
+Autonomia, equilíbrio e qualidade de vida
+Botão:
+AGENDAR PELO WHATSAPP
+8. Contato
+Telefone: (11) 96761-5459
+WhatsApp: (11) 96761-5459
+E-mail: 
+axis@axisfitness.com.br
+Instagram: @studioaxisoficial
+Botão WhatsApp flutuante fixo na tela
+9. Integrações Obrigatórias
+Botão WhatsApp em toda página
+Clique direto para WhatsApp
+Pixel Meta instalado
+Google 
+Analytics
+ 
+Site responsivo mobile
+Carregamento rápido
+10. Identidade Visual
+Logo:
+https://drive.google.com/drive/folders/1d3QnFJbiyj8RVUAK9Tu-PD4TgProJRhR
+Paleta de cores:
+https://drive.google.com/file/d/1FPtze_JAa6YM7dfBeo2lms85Qm_5jy-9/view
+Estilo visual:
+Limpo
+Profissional
+Área da saúde
+Sem poluição visual
+Focado em conversão
+Design moderno
+Visual acolhedor
+11. Imagens do Site
+As fotos do site serão enviadas posteriormente pelo cliente.
+Utilizar temporariamente imagens genéricas apenas como 
+placeholder
+.
+Após envio, substituir por:
+Fotos do 
+studio
+Fotos de atendimento
+Fotos dos equipamentos
+Fotos do ambiente
+Fotos dos profissionais
+12. Sites de Referência
+https://www.academialeven.com.br/
+Concorrentes:
+https://www.instagram.com/raialivre
+https://www.instagram.com/ficusacademiaoficial
+https://www.instagram.com/academiagavioes24h.jabaquara
+13. Política de Privacidade
+O Studio 
+Áxis
+ valoriza a privacidade e a segurança dos dados de seus clientes e visitantes.
+Coletamos informações pessoais como nome, telefone, e-mail e outros dados necessários para cadastro, sempre fornecidos de forma voluntária pelo usuário.
+Esses dados são utilizados para:
+Realização de cadastros no sistema interno (
+NextFit
+)
+Agendamento e confirmação de aulas
+Comunicação com o cliente
+Emissão de notas fiscais
+Envio de informações e avisos
+As informações são armazenadas com segurança e não são compartilhadas com terceiros, exceto quando necessário para obrigações legais.
+O usuário pode solicitar atualização ou exclusão dos dados a qualquer momento.
+Ao utilizar o site, o usuário concorda com esta política.
+14. Termos de Uso
+Ao acessar este site, o usuário concorda com os presentes Termos de Uso.
+O site tem como objetivo fornecer informações sobre serviços e formas de contato.
+As informações não substituem avaliação profissional presencial.
+Todo o conteúdo é de propriedade do Studio 
+Áxis
+.
+É proibida reprodução sem autorização.
+O Studio 
+Áxis
+ pode atualizar os termos sem aviso prévio.
+15. Tipo de Site
+Landing Page única
+Foco em conversão
+Objetivo: WhatsApp
+Idioma: Português
+Site direto e sem distrações
+16. Botões CTA para usar no site
+Agendar Aula Experimental
+Falar com Especialista
+Agendar pelo WhatsApp
+Quero Começar
+Falar Agora
+Agendar Avaliação
+Começar Hoje
+17. Observações Importantes
+Site deve ser rápido
+Mobile 
+first
+Foco total em conversão
+Botão WhatsApp sempre visível
+Mostrar preço inicial
+Comunicar segurança e personalização
+Visual acolhedor e profissional
+ITEM OBRIGATÓRIO NO SITE:
+PLANOS A PARTIR DE R$ 229,90

@@ -1,0 +1,386 @@
+/* ===================================
+   ESTILOS ADICIONAIS - STUDIO AXIS
+   Melhorias solicitadas pela cliente
+   =================================== */
+
+/* Cards Clicáveis */
+.card-link {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 137, 57, 0.3);
+}
+
+/* ===================================
+   SEÇÃO DE MODALIDADES DETALHADAS
+   =================================== */
+
+.modalidades {
+    padding: 100px 20px;
+    background: #000;
+}
+
+.modalidade-item {
+    margin: 80px 0;
+    scroll-margin-top: 120px; /* Para navegação com cards */
+}
+
+.modalidade-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.modalidade-item.reverse .modalidade-content {
+    direction: rtl;
+}
+
+.modalidade-item.reverse .modalidade-text {
+    direction: ltr;
+}
+
+.modalidade-badge {
+    display: inline-block;
+    background: rgba(255, 137, 57, 0.2);
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border: 1px solid var(--primary);
+}
+
+.modalidade-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.modalidade-text p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.modalidade-benefits {
+    list-style: none;
+    margin: 32px 0;
+}
+
+.modalidade-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--text-gray);
+}
+
+.modalidade-benefits li i {
+    color: var(--primary);
+    width: 20px;
+    height: 20px;
+}
+
+.modalidade-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--primary);
+}
+
+.modalidade-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===================================
+   SEÇÃO DE ESTRUTURA E ACESSIBILIDADE
+   =================================== */
+
+.estrutura {
+    padding: 100px 20px;
+    background: #0a0a0a;
+}
+
+/* Banner de Acessibilidade */
+.acessibilidade-banner {
+    background: linear-gradient(135deg, rgba(255, 137, 57, 0.1) 0%, rgba(255, 137, 57, 0.05) 100%);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    align-items: center;
+}
+
+.acessibilidade-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acessibilidade-icon i {
+    width: 40px;
+    height: 40px;
+    color: var(--text-white);
+}
+
+.acessibilidade-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--text-white);
+}
+
+.acessibilidade-content p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.acessibilidade-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.access-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 137, 57, 0.3);
+}
+
+.access-item i {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+}
+
+.access-item span {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Galeria de Fotos */
+.estrutura-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 250px;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 520px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    padding: 20px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ===================================
+   RESPONSIVIDADE DAS NOVAS SEÇÕES
+   =================================== */
+
+@media (max-width: 968px) {
+    /* Modalidades */
+    .modalidade-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .modalidade-item.reverse .modalidade-content {
+        direction: ltr;
+    }
+
+    .modalidade-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .modalidade-image img {
+        height: 300px;
+    }
+
+    /* Acessibilidade */
+    .acessibilidade-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .acessibilidade-icon {
+        margin: 0 auto;
+    }
+
+    .acessibilidade-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galeria */
+    .estrutura-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Modalidades */
+    .modalidade-item {
+        margin: 60px 0;
+    }
+
+    .modalidade-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .modalidade-text p {
+        font-size: 1rem;
+    }
+
+    .modalidade-benefits li {
+        font-size: 0.95rem;
+    }
+
+    /* Acessibilidade */
+    .acessibilidade-banner {
+        padding: 30px 20px;
+    }
+
+    .acessibilidade-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .acessibilidade-icon i {
+        width: 30px;
+        height: 30px;
+    }
+
+    .acessibilidade-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .acessibilidade-content p {
+        font-size: 1rem;
+    }
+
+    .access-item {
+        padding: 12px 16px;
+    }
+
+    .access-item span {
+        font-size: 0.85rem;
+    }
+
+    /* Galeria */
+    .estrutura-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item,
+    .gallery-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 200px;
+    }
+}
+
+/* ===================================
+   MELHORIAS DE SMOOTH SCROLL
+   =================================== */
+
+html {
+    scroll-padding-top: 120px; /* Espaço para header fixo */
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalidade-item,
+.gallery-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.modalidade-item:nth-child(1) { animation-delay: 0.1s; }
+.modalidade-item:nth-child(2) { animation-delay: 0.2s; }
+.modalidade-item:nth-child(3) { animation-delay: 0.3s; }
+.modalidade-item:nth-child(4) { animation-delay: 0.4s; }
+.modalidade-item:nth-child(5) { animation-delay: 0.5s; }
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
