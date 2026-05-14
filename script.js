@@ -162,4 +162,81 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slides.length > 0) {
         setInterval(nextSlide, slideInterval);
     }
+
+    // Gallery Modal Functionality
+    const galleryModal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+    const prevImage = document.getElementById('prevImage');
+    const nextImage = document.getElementById('nextImage');
+    const currentImageSpan = document.getElementById('currentImage');
+    const totalImagesSpan = document.getElementById('totalImages');
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    // Open modal when clicking on gallery items
+    document.querySelectorAll('.gallery-item[data-gallery]').forEach(item => {
+        item.addEventListener('click', () => {
+            const imageData = item.getAttribute('data-gallery');
+            currentImages = JSON.parse(imageData);
+            currentIndex = 0;
+            updateModalImage();
+            galleryModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        galleryModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close modal on background click
+    galleryModal.addEventListener('click', (e) => {
+        if (e.target === galleryModal) {
+            galleryModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
+            galleryModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Navigate to previous image
+    prevImage.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateModalImage();
+    });
+
+    // Navigate to next image
+    nextImage.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateModalImage();
+    });
+
+    // Navigate with arrow keys
+    document.addEventListener('keydown', (e) => {
+        if (!galleryModal.classList.contains('active')) return;
+        
+        if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            updateModalImage();
+        } else if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            updateModalImage();
+        }
+    });
+
+    function updateModalImage() {
+        modalImage.src = currentImages[currentIndex];
+        currentImageSpan.textContent = currentIndex + 1;
+        totalImagesSpan.textContent = currentImages.length;
+    }
 });

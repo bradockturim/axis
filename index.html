@@ -239,12 +239,12 @@
                     <div class="modalidade-content">
                         <div class="modalidade-text">
                             <div class="modalidade-badge">Massagem</div>
-                            <h3>Massagem Terapêutica</h3>
+                            <h3>Massagem</h3>
                             <p>Técnicas de massagem para alívio de tensões musculares, promoção do bem-estar e recuperação pós-treino. Tratamento complementar ideal para potencializar seus resultados.</p>
                             <ul class="modalidade-benefits">
                                 <li><i data-lucide="check-circle"></i> Alívio de tensões musculares</li>
                                 <li><i data-lucide="check-circle"></i> Melhora da circulação</li>
-                                <li><i data-lucide="check-circle"></i> Recuperação pós-treino</li>
+                                <li><i data-lucide="check-circle"></i> Drenagem pós operatória</li>
                                 <li><i data-lucide="check-circle"></i> Redução do estresse</li>
                             </ul>
                             <a href="https://wa.me/5511967615459?text=Olá! Tenho interesse na Massagem Terapêutica." target="_blank" rel="noopener noreferrer" class="btn btn-outline">Saber Mais</a>
@@ -300,25 +300,25 @@
                             <h4>Fachada</h4>
                         </div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-gallery='["imagens/Pilates(1).jpg","imagens/Pilates(2).jpg","imagens/Pilates.jpg","imagens/Sala de espera pilates .jpg","imagens/Estrutura pilates.jpg"]'>
                         <img src="imagens/Pilates(1).jpg" alt="Área de Pilates">
                         <div class="gallery-overlay">
                             <h4>Área de Pilates</h4>
                         </div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-gallery='["imagens/Alunos treinamento funcional (1).jpg","imagens/Alunos treinamento funcional .jpg","imagens/Alunos treinamento funcional.jpg","imagens/Estrutura treinamento funcional(1).jpg","imagens/Estrutura treinamento funcional.jpg"]'>
                         <img src="imagens/Alunos treinamento funcional (1).jpg" alt="Área Funcional">
                         <div class="gallery-overlay">
                             <h4>Área Funcional</h4>
                         </div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-gallery='["imagens/Estrutura.jpg","imagens/Recepção .jpg","imagens/Estrutura banheiros piso superior .jpg","imagens/Estrutura - Loja de roupas fitness e acessórios .jpg","imagens/Lanchonete .jpg","imagens/Banheiro acessível (1).jpg","imagens/Banheiro acessível .jpg"]'>
                         <img src="imagens/Estrutura.jpg" alt="Espaço Coletivo">
                         <div class="gallery-overlay">
                             <h4>Espaço Coletivo</h4>
                         </div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-gallery='["imagens/Sala de musculação .jpg","imagens/Musculação com personal .jpg","imagens/Estrutura sala de musculação .jpg"]'>
                         <img src="imagens/Sala de musculação .jpg" alt="Área de Musculação">
                         <div class="gallery-overlay">
                             <h4>Área de Musculação</h4>
@@ -454,6 +454,27 @@
     <a href="https://wa.me/5511967615459?text=Olá! Vim pelo site e gostaria de mais informações." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i data-lucide="message-circle"></i>
     </a>
+
+    <!-- Photo Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <i data-lucide="x"></i>
+            </button>
+            <button class="modal-nav modal-prev" id="prevImage">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <button class="modal-nav modal-next" id="nextImage">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            <div class="modal-counter">
+                <span id="currentImage">1</span> / <span id="totalImages">1</span>
+            </div>
+        </div>
+    </div>
 
     <script>
         lucide.createIcons();
