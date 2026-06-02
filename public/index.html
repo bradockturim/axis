@@ -10,30 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8PHLCCNM6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-K8PHLCCNM6');
-    </script>
-
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WWZ7RKC5');
-    </script>
-
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1345025864103250');
-        fbq('track', 'PageView');
-    </script>
-
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWZ7RKC5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1345025864103250&ev=PageView&noscript=1"></noscript>
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -472,6 +452,20 @@
             </button>
             <div class="modal-counter">
                 <span id="currentImage">1</span> / <span id="totalImages">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner LGPD -->
+    <div id="cookieBanner" class="cookie-banner" style="display:none" role="dialog" aria-label="Aviso de cookies">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <strong>Privacidade e Cookies</strong>
+                <p>Utilizamos cookies de análise e marketing (Google Analytics, Google Tag Manager e Meta Pixel) para entender como você usa nosso site e oferecer uma experiência melhor. Você pode aceitar ou recusar o uso desses cookies. Saiba mais em nossa <a href="#" class="cookie-link" onclick="return false;">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookieReject" class="cookie-btn cookie-btn-reject">Recusar</button>
+                <button id="cookieAccept" class="cookie-btn cookie-btn-accept">Aceitar tudo</button>
             </div>
         </div>
     </div>

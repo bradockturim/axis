@@ -384,3 +384,110 @@ html {
 .gallery-item:nth-child(3) { animation-delay: 0.3s; }
 .gallery-item:nth-child(4) { animation-delay: 0.4s; }
 .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===================================
+   BANNER DE COOKIES LGPD
+   =================================== */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #141414;
+    border-top: 1px solid rgba(255, 137, 57, 0.25);
+    padding: 20px 24px;
+    box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.5);
+    animation: cookieSlideUp 0.35s ease;
+}
+
+@keyframes cookieSlideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.cookie-banner-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.cookie-banner-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.cookie-banner-text p {
+    font-size: 13px;
+    color: #A0A0A0;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.cookie-link {
+    color: #FF8939;
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.cookie-btn-reject {
+    background: transparent;
+    color: #A0A0A0;
+    border: 1px solid #333;
+}
+
+.cookie-btn-reject:hover {
+    border-color: #666;
+    color: #fff;
+}
+
+.cookie-btn-accept {
+    background: #FF8939;
+    color: #fff;
+}
+
+.cookie-btn-accept:hover {
+    background: #e67a32;
+}
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        padding: 16px;
+    }
+    .cookie-banner-content {
+        gap: 14px;
+    }
+    .cookie-banner-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

@@ -1,6 +1,74 @@
+// ─── LGPD Cookie Consent ────────────────────────────────────────────────────
+
+const LGPD_CONSENT_KEY = 'axis_cookie_consent';
+
+function loadTrackingScripts() {
+    // Google Analytics (GA4)
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-K8PHLCCNM6';
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-K8PHLCCNM6');
+
+    // Google Tag Manager
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WWZ7RKC5');
+
+    // Meta Pixel
+    !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;
+        n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+        t=b.createElement(e);t.async=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init','1345025864103250');
+    window.fbq('track','PageView');
+}
+
+function initCookieConsent() {
+    const consent = localStorage.getItem(LGPD_CONSENT_KEY);
+
+    if (consent === 'accepted') {
+        loadTrackingScripts();
+        return;
+    }
+
+    if (consent === 'rejected') {
+        return;
+    }
+
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    banner.style.display = 'block';
+
+    document.getElementById('cookieAccept').addEventListener('click', () => {
+        localStorage.setItem(LGPD_CONSENT_KEY, 'accepted');
+        banner.style.display = 'none';
+        loadTrackingScripts();
+    });
+
+    document.getElementById('cookieReject').addEventListener('click', () => {
+        localStorage.setItem(LGPD_CONSENT_KEY, 'rejected');
+        banner.style.display = 'none';
+    });
+}
+
+initCookieConsent();
+
+// ─── App ─────────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Lucide icons are initialized in HTML
-    
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -31,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const ensureFbcCookieFromFbclid = () => {
+        if (localStorage.getItem(LGPD_CONSENT_KEY) !== 'accepted') return;
         const params = new URLSearchParams(window.location.search);
         const fbclid = params.get('fbclid');
         if (!fbclid) return;
